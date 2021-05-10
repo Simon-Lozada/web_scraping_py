@@ -48,3 +48,6 @@ We activate forward-socks5 uncommenting the following line:
 
 Hacemos un Restart de Privoxy para aplicar los cambios de la siguiente manera:
 `sudo /etc/init.d/privoxy restart`
+
+ok that's all, I must especially thank jarroba for creating a tutorial in Spanish on this same topic, the tutorial link is:
+https://jarroba.com/scraping-anonimo-la-red-tor/
