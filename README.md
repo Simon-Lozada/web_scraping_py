@@ -7,7 +7,7 @@ And the other does not use tor, but has the advantage that it is faster.
 Also, this project contains a script that Tor can use as a proxy (which you can use for other projects if you want). 
 However, you have to do some basic settings in the Tor browser to use it.
 
-you need:
+### you need:
 
 -Activate the "ControlPort" so that TOR listens on port 9051, since this is the port on which TOR will listen to any communication from the applications that talk to the TOR controller.
 
@@ -36,7 +36,7 @@ We do a TOR restart to apply the changes as follows:`sudo /etc/init.d/tor restar
 
 It may be the case that there are problems or conflicts when enabling ControlPort. In that case, it should be enabled as follows, putting the '&' at the end to make it run in the background:`tor --controlport 9051 &`
 
-That would be all the Tor browser settings.
+### That would be all the Tor browser settings.
 
 TOR by itself is not an http proxy, so to gain access to the TOR network, you must use Privoxy as an http proxy through socks5. We install Privoxy as follows:`sudo apt-get install privoxy`
 
@@ -46,7 +46,7 @@ We have to tell Privoxy to use TOR to carry all traffic through the SOCKS server
 We activate forward-socks5 uncommenting the following line:
 `forward-socks5 / 127.0.0.1:9050`
 
-Hacemos un Restart de Privoxy para aplicar los cambios de la siguiente manera:
+We do a Privoxy Restart to apply the changes as follows:
 `sudo /etc/init.d/privoxy restart`
 
 ok that's all, I must especially thank jarroba for creating a tutorial in Spanish on this same topic, the tutorial link is:
